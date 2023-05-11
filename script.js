@@ -10,6 +10,11 @@ function checkIn() {
   let date = document.getElementById('date').value;
   let equipment = document.getElementById('equipment').value;
   
+  if (name === '' || email === '' || date === '' || equipment === '') {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  
   // Update inventory count
   inventory[equipment] += 1;
   
@@ -21,6 +26,11 @@ function checkOut() {
   let email = document.getElementById('email').value;
   let date = document.getElementById('date').value;
   let equipment = document.getElementById('equipment').value;
+  
+  if (name === '' || email === '' || date === '' || equipment === '') {
+    alert('Please fill in all required fields.');
+    return;
+  }
   
   // Check if there is equipment left in inventory
   if (inventory[equipment] > 0) {
