@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Check-In/Check-Out</title>
+	<title>Check-In/Check-Out Program</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
 </head>
 <body>
 	<div class="container">
 		<h1>Check-In/Check-Out Program</h1>
 		<form>
-			<label for="name">Name:</label>
-			<input type="text" id="name" placeholder="Enter your name" required>
-			<label for="email">Email:</label>
-			<input type="email" id="email" placeholder="Enter your email" required>
-			<label for="date">Date:</label>
-			<input type="date" id="date" placeholder="Select date" required>
-			<label for="equipment">Equipment:</label>
-			<select id="equipment" required>
-				<option value="">Select equipment</option>
-				<option value="laptop">Laptop</option>
-				<option value="projector">Projector</option>
-				<option value="microphone">Microphone</option>
-			</select>
-			<div class="buttons">
-				<button type="button" id="checkin" onclick="checkIn()">Check-In</button>
-				<button type="button" id="checkout" onclick="checkOut()">Check-Out</button>
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
 			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="date">Date:</label>
+				<input type="date" id="date" name="date" required>
+			</div>
+			<div class="form-group">
+				<label for="equipment">Equipment:</label>
+				<select id="equipment" name="equipment" required>
+					<option value="">Select equipment...</option>
+					<option value="laptop">Laptop</option>
+					<option value="projector">Projector</option>
+					<option value="microphone">Microphone</option>
+				</select>
+			</div>
+			<button type="button" onclick="checkIn()">Check In</button>
+			<button type="button" onclick="checkOut()">Check Out</button>
+			<button type="button" onclick="viewInventory()">View Inventory</button>
+			<button type="button" onclick="viewLogs()">View Logs</button>
 		</form>
 	</div>
-
-	<script src="script.js"></script>
 </body>
 </html>
