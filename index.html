@@ -9,13 +9,14 @@
 		<h1>Check-In/Check-Out Program</h1>
 		<form>
 			<label for="name">Name:</label>
-			<input type="text" id="name" placeholder="Enter your name">
+			<input type="text" id="name" placeholder="Enter your name" required>
 			<label for="email">Email:</label>
-			<input type="email" id="email" placeholder="Enter your email">
+			<input type="email" id="email" placeholder="Enter your email" required>
 			<label for="date">Date:</label>
-			<input type="date" id="date" placeholder="Select date">
+			<input type="date" id="date" placeholder="Select date" required>
 			<label for="equipment">Equipment:</label>
-			<select id="equipment">
+			<select id="equipment" required>
+				<option value="">Select equipment</option>
 				<option value="laptop">Laptop</option>
 				<option value="projector">Projector</option>
 				<option value="microphone">Microphone</option>
@@ -30,4 +31,3 @@
 	<script src="script.js"></script>
 </body>
 </html>
-
